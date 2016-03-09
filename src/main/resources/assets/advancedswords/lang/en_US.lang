@@ -1,0 +1,30 @@
+# creative tab[s]
+itemGroup.asMain=Advanced Swords
+
+# swords
+item.advancedWoodenSword.name=Advanced Wooden Sword
+item.advancedStoneSword.name=Advanced Stone Sword
+item.advancedIronSword.name=Advanced Iron Sword
+item.advancedGoldenSword.name=Advanced Golden Sword
+item.advancedEmeraldSword.name=Advanced Emerald Sword
+item.advancedDiamondSword.name=Advanced Diamond Sword
+item.netherStarSword.name=Nether Star Sword
+item.advancedNetherStarSword.name=Advanced Nether Star Sword
+
+# items
+item.sharpnessUpgrade_0.name=Sharpness Upgrade
+item.sharpnessUpgrade_1.name=Elite Sharpness Upgrade
+item.smiteUpgrade_0.name=Smite Upgrade
+item.smiteUpgrade_1.name=Elite Smite Upgrade
+item.knockbackUpgrade_0.name=Knockback Upgrade
+item.knockbackUpgrade_1.name=Elite Knockback Upgrade
+item.fireAspectUpgrade_0.name=Fire Aspect Upgrade
+item.fireAspectUpgrade_1.name=Elite Fire Aspect Upgrade
+item.lootingUpgrade_0.name=Looting Upgrade
+item.lootingUpgrade_1.name=Elite Looting Upgrade
+item.unbreakingUpgrade_0.name=Unbreaking Upgrade
+item.unbreakingUpgrade_1.name=Elite Unbreaking Upgrade
+
+# blocks
+tile.advancedStone.name=Compressed Stone
+tile.netherStarBlock.name=Nether Star Block

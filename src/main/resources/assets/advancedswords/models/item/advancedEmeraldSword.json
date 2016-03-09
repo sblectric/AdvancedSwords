@@ -1,0 +1,6 @@
+{
+    "parent": "advancedswords:item/advancedItemBase",
+    "textures": {
+        "layer0": "advancedswords:items/advancedEmeraldSword"
+    }
+}
