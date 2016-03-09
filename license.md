@@ -1,4 +1,4 @@
-## Everything Blocks Mod license (MIT)
+## Advanced Swords Mod license (MIT)
 
 Copyright (c) 2016 Steve Blouin
 
