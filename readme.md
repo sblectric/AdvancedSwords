@@ -1,9 +1,11 @@
-##Everything Blocks
+##Advanced Swords
 
-Ever wanted to make blocks of something, but found that you couldn't? Enchanted books or potions clogging up your chests? Look no further, as Everything Blocks lets you make blocks out of any item except other blocks (for now). All mods are supported, not just Vanilla stuff. Everything Blocks has WAILA integration, too! Note that the block recipes will not override existing block recipes or recipes where the item is crafted 2x2 or 3x3 to make something by default.
+This mod provides extremely powerful swords along with more flexible sword enchanting. From advanced wooden swords to the incredible advanced nether star sword, this mod is sure to quench your thirst for power.
+This mod also includes sword enchantment upgrades, which allow you to pick and choose enchantments for your sword without needing an enchantment table or enchanted books. Simply craft the sword with the upgrade and its enchantment level will go up by one.
+You can also access enchantments up to twice the normal maximum by crafting elite enchantment upgrades, but some of these get quite expensive.
 
 This repo is for the latest version of the mod, 1.8.9.
 
-This Open Source project (see [License](https://github.com/sblectric/EverythingBlocks/blob/master/license.md)) is a mod for [Minecraft](http://www.minecraft.net/), a game by [Mojang AB](http://mojang.com/).
+This Open Source project (see [License](https://github.com/sblectric/AdvancedSwords/blob/master/license.md)) is a mod for [Minecraft](http://www.minecraft.net/), a game by [Mojang AB](http://mojang.com/).
 
-[Project on CurseForge](http://minecraft.curseforge.com/projects/everything-blocks)
+[Project on CurseForge](http://minecraft.curseforge.com/projects/advanced-swords)
