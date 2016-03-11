@@ -10,6 +10,11 @@ item.advancedEmeraldSword.name=Advanced Emerald Sword
 item.advancedDiamondSword.name=Advanced Diamond Sword
 item.netherStarSword.name=Nether Star Sword
 item.advancedNetherStarSword.name=Advanced Nether Star Sword
+item.advancedThaumiumSword.name=Advanced Thaumium Sword
+item.advancedElementalSword.name=Blade of the Cyclone
+item.advancedVoidSword.name=Advanced Void Sword
+item.advancedCrimsonSword.name=Awakened Crimson Blade
+item.advancedPrimalSword.name=Primal Annihilator
 
 # items
 item.sharpnessUpgrade_0.name=Sharpness Upgrade
@@ -28,3 +33,30 @@ item.unbreakingUpgrade_1.name=Elite Unbreaking Upgrade
 # blocks
 tile.advancedStone.name=Compressed Stone
 tile.netherStarBlock.name=Nether Star Block
+
+# special
+enchantment.special.sapmost=Greatest Sapping
+enchantment.special.sapwither=Withering
+
+# research (Thaumcraft addon)
+tc.research_category.ADVANCEDSWORDS=Sabremancy
+
+tc.research_name.ADVTHAUMSWORD=Advanced Thaumium Sword
+tc.research_text.ADVTHAUMSWORD=Iron blocks weren't versatile enough
+advancedswords.research.ADVTHAUMSWORD=Upgrading mundane swords has worked well for you, so your mind turns to magical swords. Surely enough, you've discovered how to upgrade them as well, with the advanced thaumium sword being the first of your discoveries.
+
+tc.research_name.ADVELEMSWORD=Blade of the Cyclone
+tc.research_text.ADVELEMSWORD=I just wanna fly
+advancedswords.research.ADVELEMSWORD=The Sword of the Zephyr is all well and good, but what if you were to further infuse it to enhance its strength and special properties? The Blade of the Cyclone will, upon blocking, fling you violently upwards into the air instead of simply making you gently float around. However, it will not prevent an extremely unpleasant death by fall damage.
+
+tc.research_name.ADVVOIDSWORD=Advanced Void Sword
+tc.research_text.ADVVOIDSWORD=Unlocking the latent vacuum
+advancedswords.research.ADVVOIDSWORD=Upgrading the void sword was one of your first goals - it would be immensely powerful and repair itself automatically, after all. As it turns out, this fiendish weapon also has even higher sapping properties than its little brother.
+
+tc.research_name.ADVCRIMSONSWORD=Awakened Crimson Blade
+tc.research_text.ADVCRIMSONSWORD=Weakening your foes ablaze
+advancedswords.research.ADVCRIMSONSWORD=Ah, the coveted crimson blade. Your research into the Crimson Cult has revealed a nightmarish upgrade that even the cultists dare not apply to their weapons. This blade offers the most comprehensive sapping ability of all the magical swords, and will set all enemies within a 16 block radius on fire when blocking.
+
+tc.research_name.ADVPRIMALSWORD=Primal Annihilator
+tc.research_text.ADVPRIMALSWORD=Giving everything up for pure power
+advancedswords.research.ADVPRIMALSWORD=The existence of the primal crusher proved that the primordial pearl had immense offensive potential. You decided that it could be improved, though at the cost of its multitool capabilities. This mighty sword sacrifices all of its special abilities in pursuit of pure destruction, and will wither your enemies away.

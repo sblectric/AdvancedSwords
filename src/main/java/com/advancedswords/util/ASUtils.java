@@ -5,8 +5,28 @@ import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraftforge.fml.common.registry.GameData;
 
 public class ASUtils {
+	
+	/** Cached for speed */
+	private static JointList<ItemStack> swordCache = new JointList();
+	
+	/** Gets all the registered swords in FML */
+	public static List<ItemStack> getAllSwords() {
+		if(swordCache.isEmpty()) {
+			JointList<ItemStack> list = new JointList();
+			Iterable<Item> allItems = GameData.getItemRegistry().typeSafeIterable();
+			for(Item i : allItems) {
+				if(i instanceof ItemSword) {
+					list.add(new ItemStack(i));
+				}
+			}
+			swordCache.join(list);
+		}
+		return swordCache;
+	}
 	
     /** An unlimited type of areItemStacksEqual, but cannot be null */
     public static boolean areItemStacksEqualandValid(ItemStack... stacks) {

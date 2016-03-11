@@ -18,6 +18,7 @@ import net.minecraft.world.World;
 
 public abstract class RecipeEnchantmentUpgrade implements IRecipe {
 	
+	private static List<RecipeEnchantmentUpgrade> allUpgrades = new JointList();
 	protected ItemStack upgrade;
 	protected Enchantment enchant;
 	protected int minLevel, maxLevel;
@@ -27,6 +28,31 @@ public abstract class RecipeEnchantmentUpgrade implements IRecipe {
 		this.enchant = toUpgrade;
 		this.minLevel = minLevel;
 		this.maxLevel = maxLevel;
+		allUpgrades.add(this);
+	}
+	
+	public static List<RecipeEnchantmentUpgrade> getAllUpgrades() {
+		return allUpgrades;
+	}
+	
+	/** Gets the active upgrade for this recipe */
+	public ItemStack getUpgrade() {
+		return upgrade;
+	}
+	
+	/** Gets the active enchantment for this recipe */
+	public Enchantment getEnchantment() {
+		return enchant;
+	}
+	
+	/** gets the minimum level of the enchantment needed on the sword to apply the upgrade */
+	public int getMinLevelToApply() {
+		return minLevel;
+	}
+	
+	/** gets the maxmimum level of the enchantment that can be put on the sword with the upgrade */
+	public int getMaxUpgradeLevel() {
+		return maxLevel;
 	}
 
 	/** Gets an upgradeable stack */

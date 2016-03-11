@@ -17,7 +17,7 @@ public class ASCreativeTabs {
 	}
 	
 	public static void updateCreativeTabs() {
-		((ASCreativeTab)main).updateItem(Swords.advancedDiamondSword);
+		((ASCreativeTab)main).updateItem(Swords.advancedNetherStarSword);
 	}
 
 }
