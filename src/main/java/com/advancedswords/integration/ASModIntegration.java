@@ -7,8 +7,11 @@ import net.minecraftforge.fml.common.Loader;
 
 public class ASModIntegration {
 	
+	public static boolean thaumcraftExists = Loader.isModLoaded("Thaumcraft");
+	
 	/** Mods that need integration in the pre-init phase */
 	public static void preInit() {
+		
 	}
 	
 	/** Mods that need integration in the init phase */
@@ -18,7 +21,7 @@ public class ASModIntegration {
 	/** Mods that need integration in the post-init phase */
 	public static void postInit() {
 		// Thaumcraft
-		if(Loader.isModLoaded("Thaumcraft")) {
+		if(thaumcraftExists) {
 			ThaumcraftIntegration.mainRegistry();
 			Log.logger.info("Thaumcraft integration complete.");
 		} else {

@@ -12,9 +12,11 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.Optional;
 import thaumcraft.api.items.IWarpingGear;
 
 /** The advanced void sword */
+@Optional.Interface(iface = "thaumcraft.api.items.IWarpingGear", modid = "thaumcraft")
 public class SwordAdvancedVoid extends SwordThaumic implements IWarpingGear {
 
 	protected int warping;

@@ -15,6 +15,8 @@ import thaumcraft.api.blocks.BlocksTC;
 
 import com.advancedswords.blocks.ASBlocks;
 import com.advancedswords.creativetabs.ASCreativeTabs;
+import com.advancedswords.integration.ASModIntegration;
+import com.advancedswords.integration.thaumcraft.ThaumcraftIntegration;
 import com.advancedswords.items.swords.thaumic.SwordAdvancedCrimson;
 import com.advancedswords.items.swords.thaumic.SwordAdvancedElemental;
 import com.advancedswords.items.swords.thaumic.SwordAdvancedPrimal;
@@ -82,11 +84,15 @@ public class Swords {
 		(advancedNetherStar = EnumHelper.addToolMaterial("advancedNetherStar", 5, 16384, 30.0F, 56.0F, 0)).setRepairItem(new ItemStack(ASBlocks.netherStarBlock));
 		
 		// thaumic materials
-		(advancedThaumium = EnumHelper.addToolMaterial("advancedThaumium", 3, 2250, 18.0F, 11.0F, 12)).setRepairItem(new ItemStack(BlocksTC.metal, 1, 0));
+		advancedThaumium = EnumHelper.addToolMaterial("advancedThaumium", 3, 2250, 18.0F, 11.0F, 12);
 		advancedElemental = EnumHelper.addToolMaterial("advancedElemental", 4, 6144, 24.0F, 22.0F, 8);
-		(advancedVoid = EnumHelper.addToolMaterial("advancedVoid", 4, 524, 18.0F, 24.0F, 12)).setRepairItem(new ItemStack(BlocksTC.metal, 1, 1));
+		advancedVoid = EnumHelper.addToolMaterial("advancedVoid", 4, 524, 18.0F, 24.0F, 12);
 		advancedCrimson = EnumHelper.addToolMaterial("advancedCrimson", 4, 668, 20.0F, 30.0F, 12);
 		advancedPrimal = EnumHelper.addToolMaterial("advancedPrimal", 5, 937, 22.0F, 36.0F, 12);
+		if(ASModIntegration.thaumcraftExists) {
+			advancedThaumium.setRepairItem(new ItemStack(BlocksTC.metal, 1, 0));
+			advancedVoid.setRepairItem(new ItemStack(BlocksTC.metal, 1, 1));
+		}
 	}
 	
 	/** Define new swords here */

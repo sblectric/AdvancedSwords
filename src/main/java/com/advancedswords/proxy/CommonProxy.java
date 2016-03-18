@@ -19,8 +19,8 @@ public class CommonProxy {
 	}
 	
 	public void onInit(FMLInitializationEvent event) {
-		ASItems.mainRegistry();
 		ASBlocks.mainRegistry();
+		ASItems.mainRegistry();
 		ASCreativeTabs.updateCreativeTabs();
 		ASModIntegration.onInit();
 	}

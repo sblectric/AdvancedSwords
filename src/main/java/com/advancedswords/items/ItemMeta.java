@@ -30,7 +30,7 @@ public class ItemMeta extends ItemBasic {
 	}
 	
 	public ItemMeta(int nSubItems) {
-		this(nSubItems, false);
+		this(nSubItems, false, false);
 	}
 	
 	/** Get the sub items as a list for the creative tab */

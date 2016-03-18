@@ -22,8 +22,6 @@ import com.advancedswords.util.JointList;
 /** Class for Thaumcraft integration */
 public class ThaumcraftIntegration {
 	
-	/** Is the integration enabled? */
-	public static boolean enabled = false;
 	/** Holds the list of registered researches */
 	public static JointList<ResearchItem> researches;
 	
@@ -52,7 +50,6 @@ public class ThaumcraftIntegration {
 		researches = new JointList();
 		addRecipes();
 		addResearches();
-		enabled = true; // successfully loaded
 	}
 
 	/** Add the recipes */
