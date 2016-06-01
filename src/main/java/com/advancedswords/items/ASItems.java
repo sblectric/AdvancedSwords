@@ -2,18 +2,14 @@ package com.advancedswords.items;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemModelMesher;
-import net.minecraft.client.renderer.entity.RenderItem;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.item.Item;
+import net.minecraft.init.Enchantments;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.advancedswords.config.ASConfig;
 import com.advancedswords.creativetabs.ASCreativeTabs;
-import com.advancedswords.items.swords.SwordBasic;
 import com.advancedswords.items.swords.Swords;
-import com.advancedswords.ref.RefStrings;
 import com.advancedswords.util.JointList;
 
 /** Item class */
@@ -30,20 +26,24 @@ public class ASItems {
 	
 	public static ItemBasic sharpnessUpgrade;
 	public static ItemBasic smiteUpgrade;
+	public static ItemBasic spiderUpgrade;
 	public static ItemBasic knockbackUpgrade;
 	public static ItemBasic fireAspectUpgrade;
 	public static ItemBasic lootingUpgrade;
 	public static ItemBasic unbreakingUpgrade;
+	public static ItemBasic mendingUpgrade;
 	
 	/** Add items to the game */
 	private static void addItems() {
-		items.join(
-			sharpnessUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantment.sharpness).setUnlocalizedName("sharpnessUpgrade").setCreativeTab(ASCreativeTabs.main),
-			smiteUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantment.smite).setUnlocalizedName("smiteUpgrade").setCreativeTab(ASCreativeTabs.main),
-			knockbackUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantment.knockback).setUnlocalizedName("knockbackUpgrade").setCreativeTab(ASCreativeTabs.main),
-			fireAspectUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantment.fireAspect).setUnlocalizedName("fireAspectUpgrade").setCreativeTab(ASCreativeTabs.main),
-			lootingUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantment.looting).setUnlocalizedName("lootingUpgrade").setCreativeTab(ASCreativeTabs.main),
-			unbreakingUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantment.unbreaking).setUnlocalizedName("unbreakingUpgrade").setCreativeTab(ASCreativeTabs.main)
+		if(ASConfig.enableEnchantmentUpgrades) items.join(
+			sharpnessUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantments.SHARPNESS).setUnlocalizedName("sharpnessUpgrade").setCreativeTab(ASCreativeTabs.main),
+			smiteUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantments.SMITE).setUnlocalizedName("smiteUpgrade").setCreativeTab(ASCreativeTabs.main),
+			spiderUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantments.BANE_OF_ARTHROPODS).setUnlocalizedName("spiderUpgrade").setCreativeTab(ASCreativeTabs.main),
+			knockbackUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantments.KNOCKBACK).setUnlocalizedName("knockbackUpgrade").setCreativeTab(ASCreativeTabs.main),
+			fireAspectUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantments.FIRE_ASPECT).setUnlocalizedName("fireAspectUpgrade").setCreativeTab(ASCreativeTabs.main),
+			lootingUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantments.LOOTING).setUnlocalizedName("lootingUpgrade").setCreativeTab(ASCreativeTabs.main),
+			unbreakingUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantments.UNBREAKING).setUnlocalizedName("unbreakingUpgrade").setCreativeTab(ASCreativeTabs.main),
+			mendingUpgrade = (ItemBasic)new ItemEnchantmentUpgrade(Enchantments.MENDING, true).setUnlocalizedName("mendingUpgrade").setCreativeTab(ASCreativeTabs.main)
 		);
 	}
 	

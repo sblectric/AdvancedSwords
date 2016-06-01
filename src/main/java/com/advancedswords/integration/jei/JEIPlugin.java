@@ -9,50 +9,44 @@ import mezz.jei.api.IRecipeRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.advancedswords.config.ASConfig;
 import com.advancedswords.items.swords.Swords;
 import com.advancedswords.ref.Log;
 
 @mezz.jei.api.JEIPlugin
 public class JEIPlugin implements IModPlugin {
 	
-	public static IJeiHelpers jeiHelpers;
-	
-	/** Store the helpers */
-	@Override
-	public void onJeiHelpersAvailable(IJeiHelpers helpers) {
-		jeiHelpers = helpers;
-	}
-	
 	/** Register this mod plugin with the mod registry. */
 	@Override
 	public void register(IModRegistry reg) {
+		IJeiHelpers jeiHelpers = reg.getJeiHelpers();
 		
 		// hide the addon swords when the mods aren't available
 		for(Item item : Swords.getRegisteredSwords()) {
 			if(item.getCreativeTab() == null) jeiHelpers.getItemBlacklist().addItemToBlacklist(new ItemStack(item));
 		}
 		
-		// add the recipes
-		reg.addRecipes(RecipeEnchantmentUpgradeJEI.getRecipeList());
-		
-		// register the categories
-		reg.addRecipeCategories(
-				new EnchantmentUpgradeCategory(jeiHelpers.getGuiHelper())
-		);
-		
-		// and the handlers
-		reg.addRecipeHandlers(
-				new EnchantmentUpgradeHandler()
-		);
-		
-		Log.logger.info("JEI integration complete.");
+		// don't do integration if disabled
+		if(ASConfig.enableEnchantmentUpgrades && ASConfig.jeiIntegration) {
+			// register the categories
+			reg.addRecipeCategories(
+					new EnchantmentUpgradeCategory(jeiHelpers.getGuiHelper())
+			);
+			
+			// and the handlers
+			reg.addRecipeHandlers(
+					new EnchantmentUpgradeHandler()
+			);
+			
+			
+			// add the recipes
+			reg.addRecipes(RecipeEnchantmentUpgradeJEI.getRecipeList());
+			
+			Log.logger.info("JEI integration complete.");
+		} else {
+			Log.logger.info("JEI integration complete, enchantment upgrade recipes disabled.");
+		}
 	}
-
-	@Override
-	public void onItemRegistryAvailable(IItemRegistry arg0) {}
-
-	@Override
-	public void onRecipeRegistryAvailable(IRecipeRegistry arg0) {}
 
 	@Override
 	public void onRuntimeAvailable(IJeiRuntime arg0) {}

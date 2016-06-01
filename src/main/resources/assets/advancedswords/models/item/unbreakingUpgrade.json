@@ -1,5 +1,5 @@
 {
-    "parent": "advancedswords:item/advancedItemBase",
+    "parent": "item/generated",
     "textures": {
         "layer0": "advancedswords:items/unbreakingUpgrade"
     }

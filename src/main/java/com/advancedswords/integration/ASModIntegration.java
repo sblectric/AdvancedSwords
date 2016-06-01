@@ -1,8 +1,5 @@
 package com.advancedswords.integration;
 
-import com.advancedswords.integration.thaumcraft.ThaumcraftIntegration;
-import com.advancedswords.ref.Log;
-
 import net.minecraftforge.fml.common.Loader;
 
 public class ASModIntegration {
@@ -21,12 +18,12 @@ public class ASModIntegration {
 	/** Mods that need integration in the post-init phase */
 	public static void postInit() {
 		// Thaumcraft
-		if(thaumcraftExists) {
-			ThaumcraftIntegration.mainRegistry();
-			Log.logger.info("Thaumcraft integration complete.");
-		} else {
-			Log.logger.info("Thaumcraft not found, skipping integration.");
-		}
+//		if(thaumcraftExists) {
+//			ThaumcraftIntegration.mainRegistry();
+//			Log.logger.info("Thaumcraft integration complete.");
+//		} else {
+//			Log.logger.info("Thaumcraft not found, skipping integration.");
+//		}
 	}
 
 }

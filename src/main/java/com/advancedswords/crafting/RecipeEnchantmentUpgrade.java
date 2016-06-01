@@ -3,10 +3,6 @@ package com.advancedswords.crafting;
 import java.util.List;
 import java.util.Map;
 
-import com.advancedswords.items.ASItems;
-import com.advancedswords.util.ASUtils;
-import com.advancedswords.util.JointList;
-
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Blocks;
@@ -15,6 +11,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
+
+import com.advancedswords.util.ASUtils;
+import com.advancedswords.util.JointList;
 
 public abstract class RecipeEnchantmentUpgrade implements IRecipe {
 	
@@ -50,7 +49,7 @@ public abstract class RecipeEnchantmentUpgrade implements IRecipe {
 		return minLevel;
 	}
 	
-	/** gets the maxmimum level of the enchantment that can be put on the sword with the upgrade */
+	/** gets the maximum level of the enchantment that can be put on the sword with the upgrade */
 	public int getMaxUpgradeLevel() {
 		return maxLevel;
 	}
@@ -60,9 +59,9 @@ public abstract class RecipeEnchantmentUpgrade implements IRecipe {
 		if(ASUtils.doesItemStackListContain(s, upgrade, true)) {
 			ItemStack toUpgrade = s.get(0);
 			if(enchant.canApply(toUpgrade) && toUpgrade.getItem() instanceof ItemSword) {
-				Map<Integer, Integer> activeEnchs = EnchantmentHelper.getEnchantments(toUpgrade);
-				for(Integer i : activeEnchs.keySet()) {
-					if(Enchantment.getEnchantmentById(i) == enchant) {
+				Map<Enchantment, Integer> activeEnchs = EnchantmentHelper.getEnchantments(toUpgrade);
+				for(Enchantment i : activeEnchs.keySet()) {
+					if(i == enchant) {
 						int level = activeEnchs.get(i);
 						if(level >= maxLevel) {
 							return null;
@@ -99,13 +98,13 @@ public abstract class RecipeEnchantmentUpgrade implements IRecipe {
 		// get the upgradable stack again
 		ItemStack c = getUpgradableStack(s);
 		if(c == null) return null;
-		Map<Integer, Integer> map = EnchantmentHelper.getEnchantments(c);
-		int clevel = EnchantmentHelper.getEnchantmentLevel(enchant.effectId, c);
+		Map<Enchantment, Integer> map = EnchantmentHelper.getEnchantments(c);
+		int clevel = EnchantmentHelper.getEnchantmentLevel(enchant, c);
 		
 		// check for the enchantment
-		for(Integer i : map.keySet()) {
+		for(Enchantment i : map.keySet()) {
 			// it exists
-			if(Enchantment.getEnchantmentById(i) == enchant && map.get(i) >= minLevel) {
+			if(i == enchant && map.get(i) >= minLevel) {
 				int newLevel = map.get(i) + 1;
 				map.put(i, newLevel);
 				EnchantmentHelper.setEnchantments(map, c);
@@ -115,7 +114,7 @@ public abstract class RecipeEnchantmentUpgrade implements IRecipe {
 		
 		// it does not yet exist, so give level I
 		if(minLevel <= 0) {
-			map.put(enchant.effectId, 1);
+			map.put(enchant, 1);
 			EnchantmentHelper.setEnchantments(map, c);
 			return c;
 		} else {
@@ -130,7 +129,7 @@ public abstract class RecipeEnchantmentUpgrade implements IRecipe {
 
 	@Override
 	public ItemStack getRecipeOutput() {
-		return new ItemStack(Blocks.air);
+		return new ItemStack(Blocks.AIR);
 	}
 
 	@Override

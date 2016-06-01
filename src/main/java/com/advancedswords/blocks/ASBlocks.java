@@ -3,14 +3,11 @@ package com.advancedswords.blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemModelMesher;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.advancedswords.creativetabs.ASCreativeTabs;
-import com.advancedswords.ref.RefStrings;
 import com.advancedswords.util.JointList;
 
 /** Item class */
@@ -31,8 +28,8 @@ public class ASBlocks {
 	/** Add blocks to the game */
 	private static void addBlocks() {
 		blocks.join(
-			advancedStone = (BlockBasic)new BlockBasic(Material.rock, 3, 10).setUnlocalizedName("advancedStone").setCreativeTab(ASCreativeTabs.main),
-			netherStarBlock = (BlockBasic)new BlockBasic(Material.rock, 6, 50).setUnlocalizedName("netherStarBlock").setCreativeTab(ASCreativeTabs.main)
+			advancedStone = (BlockBasic)new BlockBasic(Material.ROCK, 3, 10).setUnlocalizedName("advancedStone").setCreativeTab(ASCreativeTabs.main),
+			netherStarBlock = (BlockBasic)new BlockBasic(Material.ROCK, 6, 50).setUnlocalizedName("netherStarBlock").setCreativeTab(ASCreativeTabs.main)
 		);
 	}
 	

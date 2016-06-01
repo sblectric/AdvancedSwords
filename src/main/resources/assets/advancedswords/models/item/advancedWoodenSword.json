@@ -1,5 +1,5 @@
 {
-    "parent": "advancedswords:item/advancedItemBase",
+    "parent": "item/handheld",
     "textures": {
         "layer0": "advancedswords:items/advancedWoodenSword"
     }

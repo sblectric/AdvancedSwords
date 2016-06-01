@@ -1,12 +1,11 @@
 package com.advancedswords.util;
 
 import java.util.LinkedList;
-import java.util.List;
 
 /** An easier-to-construct linked list */
 public class JointList<T> extends LinkedList<T> {
 	
-	public JointList<T> join(List<T> add) {
+	public JointList<T> join(Iterable<T> add) {
 		for(T a : add) {
 			super.add(a);
 		}

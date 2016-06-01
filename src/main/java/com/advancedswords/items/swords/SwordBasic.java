@@ -1,15 +1,13 @@
 package com.advancedswords.items.swords;
 
 import net.minecraft.client.renderer.ItemModelMesher;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.advancedswords.api.ISwordAdvanced;
 import com.advancedswords.ref.RefStrings;
-
-import net.minecraft.item.Item.ToolMaterial;
 /** Used to implement a basic sword */
 public class SwordBasic extends ItemSword implements ISwordAdvanced {
 

@@ -21,6 +21,8 @@ item.sharpnessUpgrade_0.name=Sharpness Upgrade
 item.sharpnessUpgrade_1.name=Elite Sharpness Upgrade
 item.smiteUpgrade_0.name=Smite Upgrade
 item.smiteUpgrade_1.name=Elite Smite Upgrade
+item.spiderUpgrade_0.name=Bane of Arthropods Upgrade
+item.spiderUpgrade_1.name=Elite Bane of Arthropods Upgrade
 item.knockbackUpgrade_0.name=Knockback Upgrade
 item.knockbackUpgrade_1.name=Elite Knockback Upgrade
 item.fireAspectUpgrade_0.name=Fire Aspect Upgrade
@@ -29,6 +31,7 @@ item.lootingUpgrade_0.name=Looting Upgrade
 item.lootingUpgrade_1.name=Elite Looting Upgrade
 item.unbreakingUpgrade_0.name=Unbreaking Upgrade
 item.unbreakingUpgrade_1.name=Elite Unbreaking Upgrade
+item.mendingUpgrade_0.name=Mending Upgrade
 
 # blocks
 tile.advancedStone.name=Compressed Stone
